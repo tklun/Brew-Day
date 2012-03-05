@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Ingredient = require('./ingredient.js')
+    Ingredient = require('./ingredient.js'),
     Addition;
 
 function validatePresenceOf(value) {

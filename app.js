@@ -6,6 +6,7 @@
 var express = require('express'),
     routes = require('./routes'),
     mongoose = require('mongoose'),
+    Beer = require('./models/beer.js'),
     db = mongoose.connect('mongodb://localhost/brew-day'),
     app = module.exports = express.createServer();
 

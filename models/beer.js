@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     Addition = require('./addition.js'),
-    Yeast = require('./yeast.js')
+    YeastStarter = require('./yeast-starter.js'),
     Beer;
 
 function validatePresenceOf(value) {
@@ -19,7 +19,7 @@ Beer = new Schema({
     validate: [validatePresenceOf, 'a date is required']
   },
   'yeastStarter': {
-    type: [Yeast],
+    type: [YeastStarter],
     validate: [validatePresenceOf, 'a yeast is required']
   },
   'additions': {
@@ -31,6 +31,6 @@ Beer = new Schema({
 mongoose.model('Beer', Beer);
 
 
-exports.Yeast = function(db) {
+exports.Beer = function(db) {
   return db.model('Beer');
 };
